@@ -8,6 +8,7 @@ gem 'haml-rails'
 gem 'jquery-rails'
 
 gem 'dalli'
+gem 'omniauth'
 
 group :development,:test do
   # debugging gems
@@ -21,6 +22,8 @@ group :development,:test do
 
   gem 'guard'
   gem 'guard-rspec'
+
+  gem 'heroku'
   
 end
 
