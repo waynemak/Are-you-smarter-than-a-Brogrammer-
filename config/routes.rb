@@ -1,4 +1,6 @@
 Brogramming::Application.routes.draw do
+  
+  resources :questions, :only => :show
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
