@@ -1,20 +1,8 @@
 %strong Pick the best answer!
 
-- form_for @question, :url => question_answers_path(@question), :method => :post do |q|
-
-  %p
-    = "Question: #{@question.content}"
-
-  %p
-    = "Answers:"
-  %p
-    - @question.answer_options.each_with_index do |option, index|
-      = q.label :answer_options, option
-      = q.radio_button :answer_options, index
-      %br
-      
-  %p
-    = "Correct answer: #{@question.correct_answer}"
-    
-  %p
-    = q.submit "Next Question"
+- form_tag question_answers_path(@question) do
+  - @question.answer_options.each_with_index do |option, index|
+    = label_tag  :answer_options, option
+    = radio_button_tag :answer_options, index
+    %br
+  = submit_tag "Next Question"

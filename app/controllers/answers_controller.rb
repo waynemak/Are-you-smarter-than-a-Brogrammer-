@@ -7,4 +7,5 @@ class AnswersController < ApplicationController
     end
     redirect_to question_path(@question, :page => @question.id + 1)
   end
+
 end
