@@ -22,7 +22,7 @@ group :development,:test do
   # Unit/Behavior testing gems  
   gem "rspec-rails", ">= 2.4.1"
   gem 'shoulda-matchers'
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
 
   gem 'guard'
   gem 'guard-rspec'
