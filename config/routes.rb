@@ -1,8 +1,9 @@
 Brogramming::Application.routes.draw do
   
-  resources :questions, :only => :show
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
+  resources :questions, :only => :show do
+    resources :answers, :only => :create
+  end
+  
   get "authentications/create"
 
   match '/auth/:provider/callback' => 'authentications#create'  
