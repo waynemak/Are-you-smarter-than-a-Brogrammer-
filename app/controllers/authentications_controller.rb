@@ -4,7 +4,7 @@ class AuthenticationsController < ApplicationController
     omniauth = request.env["omniauth.auth"] 
     user.auth_key = omniauth["credentials"]["token"]
     user.name = omniauth["user_info"]["nickname"]
-    user.fb_id = omniauth["user_info"]["extra"]["user_hash"]["id"]
+    user.fb_id = omniauth["extra"]["user_hash"]["id"]
     user.save
 
     render :json => user
