@@ -1,6 +1,6 @@
 class AuthenticationsController < ApplicationController
   def create
-    render :text => request.env["omniauth.auth"].to_yaml 
+    @user = User.sign_in(request.env["omniauth.auth"])
+    render :json => @user
   end
-
 end
