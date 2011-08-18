@@ -1,1 +1,17 @@
-Hello Weald!
+%strong Pick the best answer!
+
+- form_for(@question) do |q|
+
+  %p
+    = "Question: #{@question.content}"
+
+  %p
+    = "Answers:"
+  %p
+    - @question.answer_options.each_with_index do |option, index|
+      = q.label :answer_options, option
+      = q.radio_button :answer_options, index
+      %br
+      
+  %p
+    = "Correct answer: #{@question.correct_answer}"
