@@ -1,1 +1,6 @@
-hellow world!
+%div{:style => 'width:800px; margin: 0 auto; text-align: center'}
+  %h1 Are you smarter than a brogrammer?
+  %img{:src => "../images/brogramming_home.jpg"}
+  %h4 Login with facebook to find out!
+  =link_to '/auth/facebook/' do
+    =image_tag "facebook_large.png"
