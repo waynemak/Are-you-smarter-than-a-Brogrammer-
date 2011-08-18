@@ -6,4 +6,7 @@ Brogramming::Application.routes.draw do
   get "authentications/create"
 
   match '/auth/:provider/callback' => 'authentications#create'  
+
+  root :to => 'home_page#index'
+
 end
