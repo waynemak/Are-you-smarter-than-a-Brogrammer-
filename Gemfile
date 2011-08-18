@@ -2,13 +2,17 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
 
-gem 'sqlite3'
-
 gem 'haml-rails'
 gem 'jquery-rails'
 
 gem 'dalli'
 gem 'omniauth'
+
+gem 'thin'
+
+group :production do
+  gem 'pg'
+end
 
 group :development,:test do
   # debugging gems
@@ -24,6 +28,7 @@ group :development,:test do
   gem 'guard-rspec'
 
   gem 'heroku'
-  
+
+  gem 'sqlite3'
 end
 
