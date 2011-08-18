@@ -4,8 +4,11 @@ describe AnswersController do
 
   describe "POST 'create'" do
     let(:question) { Factory(:question) }
+
     before(:each) do
-      post 'create', :question_id => question.id, :question => {:answer_options => 1 }
+      Question.stub(:find) { question }
+      question.stub(:correct_answer?) { true }
+      post 'create', :question_id => question.id
     end
 
     it { should redirect_to question_path(question, :page => 2) }
