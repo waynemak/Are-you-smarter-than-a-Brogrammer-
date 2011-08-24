@@ -1,3 +1,12 @@
-%strong Done!
+%h1.huge 
+  - if @user.score > 7
+    Nice, bro!  You iz a brogrammer!
+  - elsif @user.score > 3 && @user.score <= 7
+    You're not a brogrammer, but you're probably a nerd!
+  - else 
+    Wow, you suck!  
+    = link_to 'You need to go study!', 'http://www.quora.com/Brogramming/How-does-a-programmer-become-a-brogrammer'
+
 %p 
-  = "Your score: #{@final_score} out of #{Question.count}"
+  %h2  
+    = "You scored #{@final_score} out of #{Question.count}"

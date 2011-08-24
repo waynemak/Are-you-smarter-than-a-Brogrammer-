@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  MAX_SCORE = 1
   validates_presence_of :fb_id, :name
 
   def self.sign_in(credentials)
@@ -14,5 +15,11 @@ class User < ActiveRecord::Base
     
     user.update_attributes(:score => 0)
     user
+  end
+
+  def score
+    score = read_attribute(:score)
+    return Question.count if score > Question.count 
+    score
   end
 end
