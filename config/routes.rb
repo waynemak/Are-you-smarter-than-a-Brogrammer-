@@ -1,7 +1,5 @@
 Brogramming::Application.routes.draw do
   
-  
-
   match '/auth/:provider/callback' => 'authentications#create'  
 
   resources :questions, :only => :show do
@@ -9,5 +7,6 @@ Brogramming::Application.routes.draw do
   end
 
   root :to => 'home_page#index'
-
+  
+  resource :result, :only => :show
 end
