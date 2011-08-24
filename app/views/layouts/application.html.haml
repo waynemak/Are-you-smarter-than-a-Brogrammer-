@@ -1,0 +1,11 @@
+!!!
+%html
+  %head
+    %link{:href => "http://twitter.github.com/bootstrap/assets/css/bootstrap-1.1.0.min.css", :rel => "stylesheet"}/
+    %title Brogramming
+    = stylesheet_link_tag :all
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body
+    %div.content.span16
+      = yield
