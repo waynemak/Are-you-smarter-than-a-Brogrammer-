@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
         :fb_id      => credentials["extra"]["user_hash"]["id"]
       )
     end
+    
+    user.update_attributes(:score => 0)
     user
   end
 end

@@ -9,4 +9,5 @@ Brogramming::Application.routes.draw do
   root :to => 'home_page#index'
   
   resource :result, :only => :show
+
 end
