@@ -6,8 +6,8 @@ class AnswersController < ApplicationController
     @question = Question.find(params[:question_id])
 
     return redirect_to question_path(@question) unless params[:answer_options]
-    if @question.correct_answer?(params[:answer_options])
-      logger.info { "Update the answer count" }
+    if @question.correct_answer?(params[:answer_options].to_i)
+      current_user.increment(:score).save
     end
     
     if @question.id == Question.count
