@@ -5,11 +5,12 @@ class User < ActiveRecord::Base
     if (user = User.where(:fb_id => credentials["extra"]["user_hash"]["id"]).first)
       user.update_attributes(:auth_key => credentials["credentials"]["token"])
     else
-      User.create!(
+      user = User.create!(
         :auth_key   => credentials["credentials"]["token"],
         :name       => credentials["user_info"]["nickname"],
         :fb_id      => credentials["extra"]["user_hash"]["id"]
       )
     end
+    user
   end
 end

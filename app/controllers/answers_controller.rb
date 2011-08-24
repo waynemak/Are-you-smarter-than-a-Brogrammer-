@@ -1,5 +1,7 @@
 class AnswersController < ApplicationController
 
+  before_filter :authenticate_user
+
   def create
     @question = Question.find(params[:question_id])
 
