@@ -1,3 +1,6 @@
 %strong Done!
 %p 
   = "Your score: #{@final_score} out of #{Question.count}"
+  
+%p
+  =link_to "Take quiz again", root_path
