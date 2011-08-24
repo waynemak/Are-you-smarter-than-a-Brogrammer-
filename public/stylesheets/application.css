@@ -1,0 +1,25 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: white url(/images/bg_body_light.png);
+  height: 100%;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+form.question_form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0px;
+}
+
+form.question_form label, form.question_form input {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+

@@ -1,8 +1,15 @@
-%strong Pick the best answer!
-
-- form_tag question_answers_path(@question) do
-  - @question.answer_options.each_with_index do |option, index|
-    = label_tag  :answer_options, option
-    = radio_button_tag :answer_options, index
-    %br
-  = submit_tag "Next Question"
+%h1 
+  = "Question ##{@question.id}"
+%h3 
+  = @question.content + "?"
+- form_tag question_answers_path(@question), :class => 'question_form form-stacked' do
+  %div.clearfix
+    .input
+      %ul.inputs-list
+        - @question.answer_options.each_with_index do |option, index|
+          %li
+            %label
+              = radio_button_tag :answer_options, index, :class => 'optionsCheckboxes'
+              %span 
+                = option
+        = submit_tag "Next Question >>", :class => "btn primary"
