@@ -9,7 +9,7 @@
         - @question.answer_options.each_with_index do |option, index|
           %li
             %label
-              = radio_button_tag :answer_options, index, :class => 'optionsCheckboxes'
+              = radio_button_tag :answer_options, index, false, :class => 'optionsCheckboxes'
               %span 
                 = option
         = submit_tag "Next Question >>", :class => "btn primary"
