@@ -17,7 +17,7 @@ Question.create!(
 )
 
 Question.create!(
-  :content => "What is a Brogrammer's favorite beer", 
+  :content => "What is a brogrammer's favorite beer", 
   :answer_options => ['Amstel light', 'Budlight', 'Natty light'], 
   :correct_answer => 2
 )
@@ -30,7 +30,7 @@ Question.create!(
 )
 
 Question.create!(
-  :content => "When should raybans be worn", 
+  :content => "When should Ray-Bans be worn", 
   :answer_options => ['Outside on a sunny day', 'All the time'], 
   :correct_answer => 1
 )
@@ -56,5 +56,5 @@ Question.create!(
 Question.create!(
   :content => "What do brogrammers do?", 
   :answer_options => ['Fix bugs', 'Drink beer', 'Rage', 'All of the above'], 
-  :correct_answer => 0
+  :correct_answer => 3
 )
