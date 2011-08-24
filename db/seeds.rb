@@ -29,6 +29,12 @@ Question.create!(
 )
 
 Question.create!(
+  :content => "What is a brostache?", 
+  :answer_options => ['Some type of European food', 'The most awesome facial hair ever'], 
+  :correct_answer => 1
+)
+
+Question.create!(
   :content => "When should Ray-Bans be worn?", 
   :answer_options => ['Outside on a sunny day', 'All the time'], 
   :correct_answer => 1
