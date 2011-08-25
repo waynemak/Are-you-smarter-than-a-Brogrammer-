@@ -5,6 +5,7 @@ html {
 body {
   background: white url(/images/bg_body_light.png);
   height: 100%;
+  text-transform: uppercase;
 }
 
 h1 {
