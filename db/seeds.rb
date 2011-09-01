@@ -25,7 +25,7 @@ Question.create!(
 Question.create!(
   :content => "Which neighborhood has the highest BSI?", 
   :answer_options => ['Mission', 'Chinatown'], 
-  :correct_answer => 1
+  :correct_answer => 0
 )
 
 Question.create!(
@@ -43,7 +43,7 @@ Question.create!(
 Question.create!(
   :content => "What is this number: 1011?", 
   :answer_options => ['1011', '33', '11'], 
-  :correct_answer => 1
+  :correct_answer => 2
 )
 
 Question.create!(
