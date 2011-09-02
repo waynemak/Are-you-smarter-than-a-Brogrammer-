@@ -30,3 +30,6 @@ h1.huge{
   margin-bottom: 60px;
 }
 
+.container { 
+  border: 1px solid black;
+}
