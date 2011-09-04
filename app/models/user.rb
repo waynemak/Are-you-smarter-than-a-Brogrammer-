@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
     else
       user = User.create!(
         :auth_key   => credentials["credentials"]["token"],
-        :name       => credentials["user_info"]["nickname"],
+        :name       => credentials["user_info"]["nickname"].to_s,
         :fb_id      => credentials["extra"]["user_hash"]["id"]
       )
     end
