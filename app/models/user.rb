@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   MAX_SCORE = 1
-  validates_presence_of :fb_id
+  validates_presence_of :fb_id, :name
 
   def self.sign_in(credentials)
     if (user = User.where(:fb_id => credentials["extra"]["user_hash"]["id"]).first)
@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
     else
       user = User.create!(
         :auth_key   => credentials["credentials"]["token"],
-        :name       => credentials["user_info"]["nickname"],
+        :name       => credentials["user_info"]["name"],
         :fb_id      => credentials["extra"]["user_hash"]["id"]
       )
     end
