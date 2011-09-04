@@ -33,3 +33,29 @@ h1.huge{
 .container { 
   border: 1px solid black;
 }
+
+.leader_board {
+  margin: 10px 0px;
+  height: 150px;
+}
+
+.leader_board ul li {
+  display: block;
+  width: 60%;
+  list-style: none;
+  font-size: 20px;
+}
+.leader_board ul li:last-child {
+  margin-bottom: 20px;
+}
+.leader_name, .leader_score {
+  float: left;
+}
+
+.leader_name {
+  width: 60%;
+}
+
+.leader_score {
+  width: 39%;
+k
