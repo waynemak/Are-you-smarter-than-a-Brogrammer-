@@ -9,7 +9,7 @@
 
 %p 
   %h2  
-    = "You scored #{@final_score} out of #{Question.count}"
+    = "You scored #{@user.score} out of #{Question.count}"
 %p
   =link_to "Take quiz again", root_path
 
@@ -19,7 +19,7 @@
 
 .leader_board
   %ul
-    -for user in leaders 
+    -for user in @leaders 
       %li
         .leader_name
           = user.name
